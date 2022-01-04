@@ -1,0 +1,90 @@
+//style site quickly with bootstrap
+//add logic to CSS style and extend with Sass
+//build shopping cart and other apps - SPA - single page applications with React and Redux
+
+let's go!
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+Bootstrap 
+
+- front end frame work used to design responsive web pages and apps
+- mobile firest approach to webdev
+- includes prebuilt CSS styles and classes with JS functionality
+- we will build responsive websites with bootstrap and use its calsses to style buttons, images, forms, nav and other elements 
+
+
+Use Responsive Design with Bootstrap Fluid Containers
+
+- the cat photo app is back
+- we can use bootstrap here to figure our sscreen size and resizing
+- seems a lot like media queries
+- add bootsrap by adding this lin kto top of html 
+- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+- challenge   we put all the body in a div with this class
+- <div class='container-fluid'></div>
+
+
+
+Make Images Mobile Responsive
+- with bootstrap we just have to add the ‘img-responsive’ class to match the width of a phone screen
+
+- challenge - add image with img-resonsive class 
+- done with code (beneath first img)   <a href="#"><img class="img-responsive" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg" alt="A cute orange cat lying on its back."></a>
+
+
+Center Text with Bootstrap
+- make text look better - add text-center to h2 element 
+- you can add multiple classes to the same element by separating each by a space class=“like-this this-too”
+
+-challenge - center h2 text with class 
+ <h2 class="red-text text-center">CatPhotoApp</h2>
+
+
+Create a Bootstrap Button
+-bootstrap button styles look nice
+
+-some classes include btn and btn-default
+
+-challenge - new button with classes and text of ‘Like’
+<button class="btn btn-default">Like</button>
+
+
+Create a Block Element Bootstrap Button
+-normally buttons are only the size of text
+- using the class of btn-block you can stretch to fill the horizontal space with following elelemnts going onto a new line below
+-challenge add btn-block class to bootsrap button 
+<button class="btn btn-default btn-block">Like</button>
+
+
+Taste the Bootstrap Button Color Rainbow
+-btn-primary class is the main color
+- you can use it to highlight the action you wish the user to take 
+-challenge - replace btn-default class with btn-primary (will still need btn and btn-block)
+  <button class="btn btn-primary btn-block">Like</button>
+
+
+Call out Optional Actions with btn-info
+-btn-info class will call attention to optional actions users can take
+
+-challenge add a new block level bootsrap btn below the like button with the text info, add classes btn, btn-block and btn-infor 
+
+ <button class="btn btn-block btn-info">Info</button>
+
+
+Warn Your Users of a Dangerous Action with btn-danger
+
+-use btn-danger to alert users the button may cause destructive behaviour (like deleting a photo)
+-challenge create a button with text Delete and class btn-danger, btn and btn-block
+<button class="btn btn-block btn-danger">Delete</button>
+
+
+Use the Bootstrap Grid to Put Elements Side By Side
+- bootstrap uses a 12 column grid system
+- makes it easy to put elements in rows and specify the elems relative width 
+
+
+
+

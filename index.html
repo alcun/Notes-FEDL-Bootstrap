@@ -4,27 +4,31 @@
 
 let's go!
 
+bootstrap cdn link - can be downloaded 
 -----------------------------------------------------------------------------------------------------------------------
 
 
 Bootstrap 
 
 - front end frame work used to design responsive web pages and apps
-- mobile firest approach to webdev
+- mobile first approach to webdev
 - includes prebuilt CSS styles and classes with JS functionality
 - we will build responsive websites with bootstrap and use its calsses to style buttons, images, forms, nav and other elements 
+
+
 
 
 Use Responsive Design with Bootstrap Fluid Containers
 
 - the cat photo app is back
-- we can use bootstrap here to figure our sscreen size and resizing
+- we can use bootstrap here to figure our screen size and resizing
 - seems a lot like media queries
-- add bootsrap by adding this lin kto top of html 
+- add bootsrap by adding this link to top of html 
 - <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
 
 - challenge   we put all the body in a div with this class
 - <div class='container-fluid'></div>
+
 
 
 
@@ -35,12 +39,16 @@ Make Images Mobile Responsive
 - done with code (beneath first img)   <a href="#"><img class="img-responsive" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg" alt="A cute orange cat lying on its back."></a>
 
 
+
+
 Center Text with Bootstrap
 - make text look better - add text-center to h2 element 
 - you can add multiple classes to the same element by separating each by a space class=“like-this this-too”
 
 -challenge - center h2 text with class 
  <h2 class="red-text text-center">CatPhotoApp</h2>
+
+
 
 
 Create a Bootstrap Button
@@ -52,11 +60,15 @@ Create a Bootstrap Button
 <button class="btn btn-default">Like</button>
 
 
+
+
 Create a Block Element Bootstrap Button
 -normally buttons are only the size of text
 - using the class of btn-block you can stretch to fill the horizontal space with following elelemnts going onto a new line below
 -challenge add btn-block class to bootsrap button 
 <button class="btn btn-default btn-block">Like</button>
+
+
 
 
 Taste the Bootstrap Button Color Rainbow
@@ -66,12 +78,16 @@ Taste the Bootstrap Button Color Rainbow
   <button class="btn btn-primary btn-block">Like</button>
 
 
+
+
 Call out Optional Actions with btn-info
 -btn-info class will call attention to optional actions users can take
 
 -challenge add a new block level bootsrap btn below the like button with the text info, add classes btn, btn-block and btn-infor 
 
  <button class="btn btn-block btn-info">Info</button>
+
+
 
 
 Warn Your Users of a Dangerous Action with btn-danger
@@ -84,6 +100,381 @@ Warn Your Users of a Dangerous Action with btn-danger
 Use the Bootstrap Grid to Put Elements Side By Side
 - bootstrap uses a 12 column grid system
 - makes it easy to put elements in rows and specify the elems relative width 
+- column width attributes are different depending on users screen 
+- example col-md-* - md is medium * is columns wide
+- for cat cphot app we will use xs extra small
+- so col-xs-* * beimng number of columsn
+challenge - nest like info and delete buttons side by side nesting them in div class ro the each in a col-xs-4 element
+
+ <div class="row">
+ <div class="col-xs-4">
+  <button class="btn btn-block btn-primary">Like</button>
+ </div>
+ <div class="col-xs-4">
+  <button class="btn btn-block btn-info">Info</button>
+  </div>
+<div class="col-xs-4">
+  <button class="btn btn-block btn-danger">Delete</button>
+  </div>
+  </div>
+
+
+
+
+Ditch Custom CSS for Bootstrap
+
+
+- here we will remove some css custom styles and add some bootsrap built in styles
+challenge - delete 3 css delarations
+
+then delete p elemeent with dead link, replace class in h2
+
+remove the smaller image class to img resonsive in first element 
+
+
+
+
+
+
+Use a span to Target Inline Elements
+
+- span can be used to make in line elements
+- where we used block for one, span can put several elements onto the same line and style different parts of the line
+-challenge use span to nest the word love inside the p element and give span the class text-danger
+
+  <p>Things cats <span class="text-danger" >love:</span></p>
+
+
+
+Create a Custom Heading
+
+
+- we can make a heading by putting title and image in same row
+- remember the bootsrap responsove grid sustem
+- most classes can be applied to div element 
+- -challenge - nest image and h2 element in single div row then put one in column 8 and one in column 4 so they are evenly spaced 
+
+<div class="container-fluid">
+
+<div class="row">
+ <div class="col-xs-8">
+ 
+  <h2 class="text-primary text-center">CatPhotoApp</h2>
+</div>
+  
+  <div class="col-xs-4">
+  <a href="#"><img class="img-responsive thick-green-border" src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
+</div>
+  <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg" class="img-responsive" alt="Three kittens running towards the camera.">
+
+  </div>
+
+[...]
+</div
+
+
+
+
+Add Font Awesome Icons to our Buttons
+
+-font awesome gives is a library of icons 
+- these can be webfonts or vector graphics
+- all are treated like fonts
+- specify size in pixels
+- assume font size of parent html element 
+- add to any app with link
+- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+i can be used for icons with fontawesome like so 
+<i class="fas fa-info-circle"></i>
+
+- the span could be used to
+
+challenge - add a thumbs up icon - i element with classes fas and fa-thumbs-up -> keep the text like next to icon 
+
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-primary">Like      <i class="fas fa-thumbs-up"></i></button>
+
+
+Add Font Awesome Icons to all of our Buttons
+
+-font awesome icons are very useful
+they can be web fonts or vector graphics 
+
+challenge - use fa to add info-circle to info and trash to delete - we can use span istead of <i>
+
+  <div class="row">
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-primary"><i class="fas fa-thumbs-up"></i> Like</button>
+    </div>
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-info"><i class="fas fas fa-info-circle"></i>Info</button>
+    </div>
+    <div class="col-xs-4">
+      <button class="btn btn-block btn-danger"><i class="fas fas fa-trash"></i>Delete</button>
+    </div>
+  </div>
+
+
+
+Responsively Style Radio Buttons
+
+
+Our col-xs-* can be used on for elements too
+
+this way we can evenly spread them across the page regardless of screen resolution 
+
+challenge - nest both radio buttons in div class row elem then nest each within col-xs-6 class div
+
+   <div class="row">
+   <div class="col-xs-6"> <label><input type="radio" name="indoor-outdoor"> Indoor</label></div>
+   <div class="col-xs-6"> <label><input type="radio" name="indoor-outdoor"> Outdoor</label></div>
+    </div>
+
+
+
+Responsively Style Checkboxes
+
+
+
+col-xs-8 can be used on all form elements like checkboxes too
+chal - nest three checkboxes in div class row then each in col x-s-4
+
+ <div class="row">
+   <div class="col-xs-4"> <label><input type="checkbox" name="personality"> Loving</label> </div>
+  <div class="col-xs-4">  <label><input type="checkbox" name="personality"> Lazy</label></div>
+  <div class="col-xs-4">  <label><input type="checkbox" name="personality"> Crazy</label></div>
+    </div>
+
+
+Style Text Inputs as Form Controls
+
+we can add fa-paper-plane icon with <i class inside the button element
+-give form rext input form-control class
+submit btn and btn-primary class - give it plane icon
+- all elements with class .form-control have 100% width 
+    <input type="text" class="form-control" placeholder="cat photo URL" required>
+    <button class="btn btn-primary" type="submit"><i class="fa fa-paper-plane"></i>Submit</button>
+  </form>
+
+
+
+Line up Form Elements Responsively with Bootstrap
+lets put form input and submission btn on same line
+- with div class row and 
+- col-xs-* class
+
+put both in row 
+put input in col-xs-7 class
+nest submit button in col xs 5 class
+
+    <div class="row">
+    <div class="col-xs-7">
+    <input type="text" class="form-control" placeholder="cat photo URL" required>
+    </div>
+    <div class="col-xs-5">
+    <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Submit</button>
+    </div>
+    </div>
+
+
+
+
+Create a Bootstrap Headline
+
+add a headline with the bootstrap classes text-primary and text-center
+
+<h3 class="text-primary text-center">Jquery Playground</h3>
+
+
+House our page within a Bootstrap container-fluid div
+
+put the d3 in a container-fluid div 
+
+<div class="container-fluid">
+<h3 class="text-primary text-center">jQuery Playground</h3>
+</div>
+
+
+
+
+
+Create a Bootstrap Row
+
+create a row div velow the h3
+
+<div class="container-fluid">
+  <h3 class="text-primary text-center">jQuery Playground</h3>
+  <div class="row">
+  </div>
+</div>
+
+Now that we have a Bootstrap Row, let's split it into two columns to house our elements.
+
+put each element - 2 divs with the class col-xs-6
+
+<div class="container-fluid">
+  <h3 class="text-primary text-center">jQuery Playground</h3>
+  <div class="row">
+    <div class="col-xs-6">
+            </div>
+    <div class="col-xs-6">
+      </div>
+  </div>
+</div>
+
+//note are both within the row div 
+
+
+
+
+
+Create Bootstrap Wells
+
+
+
+a ‘wll’ wil lcreate a visual sense of depth to columns 
+
+put one div with calss well within each col-xs-6 elements
+
+<div class="container-fluid">
+  <h3 class="text-primary text-center">jQuery Playground</h3>
+  <div class="row">
+    <div class="col-xs-6">
+      <div class="well">
+        </div>
+
+    </div>
+    <div class="col-xs-6">
+      <div class="well">
+        </div>
+    </div>
+  </div>
+</div>
+
+//note this gives a short of shadow to the columns 
+
+
+
+
+Add Elements within Your Bootstrap Wells
+
+-now we will add three button elements in each div element
+6 buttons total
+
+  </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="well">
+<button>Button</button>
+<button>Button</button>
+<button>Button</button>
+
+
+
+
+Apply the Default Bootstrap Button Style
+
+we will apply btn and btn-default classes to each button element
+
+class ="btn btn-default"
+
+  <div class="col-xs-6">
+      <div class="well">
+        <button class ="btn btn-default"></button>
+        <button class ="btn btn-default"></button>
+        <button class ="btn btn-default"></button>
+
+
+
+
+
+Create a Class to Target with jQuery Selectors
+
+
+-this class will not have corresponding css but will serve the purpose of being selected more easily with jQuery
+- lets give each button the class target
+target
+
+    <div class="col-xs-6">
+      <div class="well">
+        <button class="btn btn-default target"></button>
+        <button class="btn btn-default target"></button>
+        <button class="btn btn-default target"></button>
+
+
+
+Add id Attributes to Bootstrap Elements
+
+id are added like classes.. remember? 
+<div class="class" id="class></div>
+
+lets add id="left-well"
+  <div class="col-xs-6">
+      <div class="well" id="right-well">
+        <button class="btn btn-default target"></button>
+        <button class="btn btn-default target"></button>
+        <button class="btn btn-default target"></button>
+      </div>
+
+
+
+
+Label Bootstrap Wells
+
+for clarity we can label each row
+
+above left well in the col div el, add a h4 element with the text #left-well
+
+  <div class="col-xs-6">
+      <h4>#left-well</h4>
+      <div class="well" id="left-well">
+        <button class="btn btn-default target"></button>
+        <button class="btn btn-default target"></button>
+        <button class="btn btn-default target"></button>
+
+
+
+
+
+Give Each Element a Unique id
+
+if we give each element a unique id we can target them with jQuery 
+
+lets give each button an id from target1-target6
+1-3 in left
+4-6 in right
+
+e.g.   <button class="btn btn-default target" id="target6"></button>
+
+Label Bootstrap Buttons
+
+Lets label the buttons with the same text as the id selector 
+
+
+
+Use Comments to Clarify Code
+
+Using jQuery we can modify html elems without changing them in html
+if the code should NOT be modified add some comments
+
+<!-- comment like this>
+
+-challenge add a comment at the top 
+
+<!--Code below this line should not be changed-->
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
